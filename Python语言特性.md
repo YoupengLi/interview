@@ -2,7 +2,7 @@
 
 ## 1 Python的函数参数传递
 
-看两个例子:
+看两个例子：
 ```python
 a = 1
 def fun(a):
@@ -50,10 +50,12 @@ print a  # [1]
 
 当一个引用传递给函数的时候，函数自动复制一份引用，这个函数里的引用和外边的引用没有半毛关系了。所以第一个例子里函数把引用指向了一个不可变对象，当函数返回的时候，外面的引用没半毛感觉。而第二个例子就不一样了，函数内的引用指向的是可变对象，对它的操作就和定位了指针地址一样，在内存里进行修改。
 
-如果还不明白的话，这里有更好的解释：http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
+如果还不明白的话，这里有更好的解释：  
+http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
 
 ## 2 Python中的元类(metaclass)
-这个非常的不常用，但是像ORM这种复杂的结构还是会需要的，详情请看：http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python
+这个非常的不常用，但是像ORM这种复杂的结构还是会需要的，详情请看：  
+http://stackoverflow.com/questions/100003/what-is-a-metaclass-in-python
 
 ## 3 @staticmethod和@classmethod
 Python其实有3个方法，即静态方法(staticmethod)，类方法(classmethod)和实例方法，如下：
@@ -170,7 +172,7 @@ AttributeError: myClass instance has no attribute '__superprivate'
 
 `_foo`：一种约定，用来指定变量私有.程序员用来指定私有变量的一种方式.不能用from module import * 导入，其他方面和公有一样访问；
 
-`__foo`：这个有真正的意义，解析器用`_classname__foo`来代替这个名字，以区别和其他类相同的命名，它无法直接像公有成员一样随便访问，通过对象名._ 类名__xxx这样的方式可以访问。
+`__foo`：这个有真正的意义，解析器用`_classname__foo`来代替这个名字，以区别和其他类相同的命名，它无法直接像公有成员一样随便访问，通过对象名._类名__xxx这样的方式可以访问。
 
 详情见：http://stackoverflow.com/questions/1301346/the-meaning-of-a-single-and-a-double-underscore-before-an-object-name-in-python  
 或者：http://www.zhihu.com/question/19754941
@@ -193,12 +195,13 @@ AttributeError: myClass instance has no attribute '__superprivate'
 http://stackoverflow.com/questions/5082452/python-string-formatting-vs-format
 
 ## 9 迭代器和生成器
-这个是stackoverflow里python排名第一的问题,值得一看: http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python
+这个是stackoverflow里python排名第一的问题,值得一看：  
+http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python
 
 这是中文版：http://taizilongxu.gitbooks.io/stackoverflow-about-python/content/1/README.html
 
-这里有个关于生成器的创建问题面试官有考：
-问：  将列表生成式中[]改成() 之后数据结构是否改变？ 
+这里有个关于生成器的创建问题面试官有考：  
+问：将列表生成式中[]改成() 之后数据结构是否改变？   
 答案：是，从列表变为生成器
 ```python
 >>> L = [x*x for x in range(10)]
@@ -258,18 +261,18 @@ http://stackoverflow.com/questions/3394835/args-and-kwargs
 
 装饰器是一个很著名的设计模式，经常被用于有切面需求的场景，较为经典的有插入日志、性能测试、事务处理等。装饰器是解决这类问题的绝佳设计，有了装饰器，我们就可以抽离出大量函数中与函数功能本身无关的雷同代码并继续重用。概括的讲，**装饰器的作用就是为已经存在的对象添加额外的功能。**
 
-这个问题比较大,推荐: http://stackoverflow.com/questions/739654/how-can-i-make-a-chain-of-function-decorators-in-python
+这个问题比较大，推荐: http://stackoverflow.com/questions/739654/how-can-i-make-a-chain-of-function-decorators-in-python
 
-中文: http://taizilongxu.gitbooks.io/stackoverflow-about-python/content/3/README.html
+中文：http://taizilongxu.gitbooks.io/stackoverflow-about-python/content/3/README.html
 
 ## 12 鸭子类型
 “当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”
 
 我们并不关心对象是什么类型，到底是不是鸭子，只关心行为。
 
-比如在python中，有很多file-like的东西，比如StringIO,GzipFile,socket。它们有很多相同的方法，我们把它们当作文件使用。
+比如在python中，有很多file-like的东西，比如StringIO，GzipFile，socket。它们有很多相同的方法，我们把它们当作文件使用。
 
-又比如list.extend()方法中,我们并不关心它的参数是不是list,只要它是可迭代的,所以它的参数可以是list/tuple/dict/字符串/生成器等.
+又比如list.extend()方法中，我们并不关心它的参数是不是list，只要它是可迭代的，所以它的参数可以是list/tuple/dict/字符串/生成器等。
 
 鸭子类型在动态语言中经常使用，非常灵活，使得python不想java那样专门去弄一大堆的设计模式。
 
@@ -290,12 +293,12 @@ http://stackoverflow.com/questions/3394835/args-and-kwargs
 好了，鉴于情况 1 跟 情况 2 都有了解决方案，python 自然就不需要函数重载了。
 
 ## 14 新式类和旧式类
-这个面试官问了,我说了老半天,不知道他问的真正意图是什么.
+这个面试官问了，我说了老半天，不知道他问的真正意图是什么。
 [stackoverflow](http://stackoverflow.com/questions/54867/what-is-the-difference-between-old-style-and-new-style-classes-in-python)
 
-这篇文章很好的介绍了新式类的特性: http://www.cnblogs.com/btchenguang/archive/2012/09/17/2689146.html
+这篇文章很好的介绍了新式类的特性：http://www.cnblogs.com/btchenguang/archive/2012/09/17/2689146.html
 
-新式类很早在2.2就出现了,所以旧式类完全是兼容的问题,Python3里的类全部都是新式类.这里有一个MRO问题可以了解下(新式类继承是根据C3算法,旧式类是深度优先),<Python核心编程>里讲的也很多.
+新式类很早在2.2就出现了，所以旧式类完全是兼容的问题，Python3里的类全部都是新式类。这里有一个MRO问题可以了解下(新式类继承是根据C3算法，旧式类是深度优先)，<Python核心编程>里讲的也很多。
 
 > 一个旧式类的深度优先的例子
 ```python
@@ -315,10 +318,10 @@ d = D()
 d.foo1()
 # A
 ```
-**按照经典类的查找顺序`从左到右深度优先`的规则，在访问`d.foo1()`的时候,D这个类是没有的..那么往上查找,先找到B,里面没有,深度优先,访问A,找到了foo1(),所以这时候调用的是A的foo1()，从而导致C重写的foo1()被绕过**
+**按照经典类的查找顺序`从左到右深度优先`的规则，在访问`d.foo1()`的时候，D这个类是没有的。那么往上查找，先找到B，里面没有，深度优先，访问A，找到了foo1()，所以这时候调用的是A的foo1()，从而导致C重写的foo1()被绕过**
 
 ## 15 `__new__`和`__init__`的区别
-这个`__new__`确实很少见到,先做了解吧.
+这个`__new__`确实很少见到，先做了解吧。
 
 1. `__new__`是一个静态方法,而`__init__`是一个实例方法.
 2. `__new__`方法会返回一个创建的实例,而`__init__`什么都不返回.
