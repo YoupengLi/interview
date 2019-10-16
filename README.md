@@ -1,6 +1,6 @@
 ## 个人面试过程中的准备，主要是笔记整理和资料整理
 **Table of Contents**
-  * [Python语言特性](#python语言特性)
+  * [Python语言特性](https://github.com/YoupengLi/interview/blob/master/Python语言特性.md)
       * [1. Python的函数参数传递](#1-python的函数参数传递)
       * [2. Python中的元类(metaclass)](#2-python中的元类metaclass)
       * [3. @staticmethod和@classmethod](#3-staticmethod和classmethod)
