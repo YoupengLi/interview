@@ -221,7 +221,7 @@ Python代码由表达式和语句组成，并由Python解释器负责执行。
 - \__name：解释器用\_classname\__name来代替这个名字用以区别和其他类相同的命名
 [python中的下划线](https://segmentfault.com/a/1190000002611411)
 
-### 28. 说一说Python自省。
+### 28. 说一说Python自省
 自省就是面向对象的语言所写的程序在运行时，所能知道对象的类型。简单一句话就是运行时能够获得对象的类型。比如：type()、dir()、getattr()、hasattr()、isinstance()   
 [Python自省（反射）指南](https://kb.cnblogs.com/page/87128/)
 
@@ -578,7 +578,7 @@ foo(arr)
 print(arr)  # [3, 4, [1, 2]]
 ```
 
-### 55. Python多线程（multi-threading）。这是个好主意吗？
+### 55. Python多线程（multi-threading）是个好主意吗？
 Python并不支持真正意义上的多线程，Python提供了多线程包。Python中有一个叫Global Interpreter Lock（GIL）的东西，它能确保你的代码中永远只有一个线程在执行。经过GIL的处理，会增加执行的开销。这就意味着如果你先要提高代码执行效率，使用threading不是一个明智的选择，当然如果你的代码是IO密集型，多线程可以明显提高效率，相反如果你的代码是CPU密集型的这种情况下多线程大部分是鸡肋。  
 
 ### 56. 异常模块中try except else finally的区别
