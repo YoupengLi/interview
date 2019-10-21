@@ -1,4 +1,4 @@
-## 个人面试过程中的准备，主要是笔记整理和资料整理
+## 个人面试过程中的准备，主要是对网上大神的笔记和资料整理，我是搬运工
 **Table of Contents**
   * [Python语言特性](https://github.com/YoupengLi/interview/blob/master/Python语言特性.md)
       * [1. Python的函数参数传递](https://github.com/YoupengLi/interview/blob/master/Python语言特性.md#1-python的函数参数传递)
